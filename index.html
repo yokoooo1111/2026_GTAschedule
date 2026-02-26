@@ -230,6 +230,33 @@ footer {
   }
 
 }
+      /* 初期状態は閉じる */
+.event-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+/* ホバーで開く（PCのみ） */
+@media (min-width: 900px) {
+  .has-event:hover .event-list {
+    max-height: 500px;
+  }
+}
+/* トグル文字 */
+.toggle {
+  font-size: 13px;
+  color: #1f7a34;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* 予定なし */
+.no-text {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #999;
+}
 </style>
 
   
@@ -254,27 +281,32 @@ footer {
   <div class="month"><strong>2月</strong></div>
   <div class="month"><strong>3月</strong></div>
 
-<div class="month highlight">
-  <span class="badge">開催予定あり</span>
+<div class="month highlight has-event">
   <strong>4月</strong>
 
-  <div class="event">
-     <strong>4/2(木)</strong>：ゴルフコンペ<br>
-    <a href="https://forms.gle/onUnGJeUJBrunPZE9"
-       target="_blank"
-       class="detail">詳細・出欠登録</a>
-  </div>
+  <div class="toggle">＜イベント一覧＞</div>
 
-  <div class="event">
-    <strong>4/3(金)</strong>：定例会１<br>
-    <a href="https://forms.gle/GT342pdMpebbHMgV7"
-       target="_blank"
-       class="detail">詳細・出欠登録</a>
+  <div class="event-list">
+    <div class="event">
+      <strong>4/2(木)</strong>：ゴルフコンペ<br>
+      <a href="#" class="detail">詳細・出欠登録</a>
+    </div>
+
+    <div class="event">
+      <strong>4/3(金)</strong>：定例会１<br>
+      <a href="#" class="detail">詳細・出欠登録</a>
+    </div>
   </div>
 </div>
-
-  <div class="month"><strong>5月</strong></div>
-  <div class="month"><strong>6月</strong></div>
+  
+<div class="month no-event">
+  <strong>5月</strong>
+  <div class="no-text">＜予定なし＞</div>
+</div>
+<div class="month no-event">
+  <strong>6月</strong>
+  <div class="no-text">＜予定なし＞</div>
+</div>
 
  <div class="month highlight">
   <span class="badge">開催予定あり</span>
