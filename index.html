@@ -8,7 +8,7 @@
 
     <style>
  body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   margin: 0;
   background: #f4f8f6;
   color: #333;
@@ -146,12 +146,12 @@ footer {
 .box a {
   color: #1f7a34;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 .section {
   margin-top: 80px;
 }
-.section h2 {
+.box h2 {
   font-size: 22px;
   border-left: 4px solid #1f7a34;
   padding-left: 12px;
@@ -200,6 +200,35 @@ footer {
   .month {
     border-radius: 16px;
   }
+}
+
+      /* PCだけ上品に軽くする */
+@media (min-width: 900px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .month strong {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .event {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .detail {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
 }
 </style>
 
