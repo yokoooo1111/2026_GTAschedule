@@ -53,9 +53,17 @@ h1 {
   border-top: 4px solid #1f7a34;   /* ← 緑ライン */
 }
 
-.month:hover {
+.month {
+  transition: 0.3s ease;
+}
+
+/* 予定あり月だけ動く */
+.month.highlight:hover {
   transform: translateY(-6px);
   box-shadow: 0 22px 45px rgba(0,0,0,0.08);
+}
+.month:not(.highlight) {
+  opacity: 0.8;
 }
 
 .month strong {
