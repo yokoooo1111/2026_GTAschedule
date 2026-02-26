@@ -53,7 +53,8 @@ h1 {
   border-top: 4px solid #1f7a34;   /* ← 緑ライン */
 }
 .month:not(.highlight) {
-  opacity: 0.8;
+  opacity: 0.85;
+  cursor: default;
 }
 .month {
   transition: 0.3s ease;
@@ -66,10 +67,8 @@ h1 {
 }
 
 .month strong {
-  font-size: 20px;
-  color: #1f7a34;
-  display: block;
-  margin-bottom: 16px;
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
 /* 開催予定ありバッジ */
@@ -91,6 +90,15 @@ h1 {
   margin-bottom: 18px;
   font-size: 14px;
   line-height: 1.6;
+}
+.coming {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #ddd;
+  color: #666;
 }
 
 .event::before {
@@ -121,7 +129,6 @@ h1 {
   background: #2e9e44;
 }
 
-/* 4月だけ強調 */
 .highlight {
   background: #e9f5ee;
   border-top: 4px solid #0f5c24;
@@ -183,14 +190,14 @@ footer {
   <strong>4月</strong>
 
   <div class="event">
-    4/2(木)：ゴルフコンペ<br>
+     <strong>4/2(木)</strong>：ゴルフコンペ<br>
     <a href="https://forms.gle/onUnGJeUJBrunPZE9"
        target="_blank"
        class="detail">詳細・出欠登録</a>
   </div>
 
   <div class="event">
-    4/3(金)：定例会１<br>
+    <strong>4/3(金)</strong>：定例会１<br>
     <a href="https://forms.gle/GT342pdMpebbHMgV7"
        target="_blank"
        class="detail">詳細・出欠登録</a>
@@ -204,7 +211,7 @@ footer {
   <span class="badge">開催予定あり</span>
   <strong>7月</strong>
   <div class="event">
-    7/2(木)：定例会２<br>
+    <strong>7/2(木)</strong>：定例会２<br>
     <span class="coming">準備中</span>
   </div>
 </div>
@@ -217,7 +224,7 @@ footer {
   <span class="badge">開催予定あり</span>
   <strong>9月</strong>
   <div class="event">
-    9/4(金)：定例会３<br>
+    <strong>9/4(金)</strong>：定例会３<br>
     <span class="coming">準備中</span>
   </div>
 </div>
@@ -226,7 +233,7 @@ footer {
   <span class="badge">開催予定あり</span>
   <strong>10月</strong>
   <div class="event">
-    10/31(土)：定例会４ inタイ<br>
+    <strong>10/31(土)</strong>：定例会４ inタイ<br>
     <span class="coming">準備中</span>
   </div>
   <div class="event">
@@ -239,7 +246,7 @@ footer {
   <span class="badge">開催予定あり</span>
   <strong>11月</strong>
   <div class="event">
-    11/13(金)-15(日)：WAOJE GVF in香港<br>
+    <strong>11/13(金)-15(日)</strong>：WAOJE GVF in香港<br>
     <span class="coming">準備中</span>
   </div>
 </div>
