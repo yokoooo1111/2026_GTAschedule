@@ -7,10 +7,10 @@
 
 
     <style>
-  body {
+ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   margin: 0;
-  background: #f7f9f8;
+  background: #f4f8f6;
   color: #333;
 }
 
@@ -39,40 +39,69 @@ h1 {
 
 .calendar {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 28px;
 }
 
 .month {
+  position: relative;
   background: #ffffff;
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  border-radius: 22px;
+  padding: 26px 24px 28px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.05);
   transition: 0.3s ease;
+  border-top: 4px solid #1f7a34;   /* ← 緑ライン */
 }
 
 .month:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.08);
 }
 
 .month strong {
   font-size: 20px;
   color: #1f7a34;
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
+/* 開催予定ありバッジ */
+.badge {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: #1f7a34;
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* イベント縦ライン */
 .event {
-  margin-bottom: 16px;
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 18px;
   font-size: 14px;
   line-height: 1.6;
 }
 
+.event::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  background: #1f7a34;
+  border-radius: 2px;
+}
+
+/* 詳細ボタン */
 .detail {
   display: inline-block;
   margin-top: 6px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   background: #1f7a34;
   color: #fff;
   font-size: 12px;
@@ -83,6 +112,13 @@ h1 {
 
 .detail:hover {
   background: #2e9e44;
+}
+
+/* 4月だけ強調 */
+.highlight {
+  background: #e9f5ee;
+  border-top: 4px solid #0f5c24;
+  box-shadow: 0 22px 50px rgba(0,0,0,0.08);
 }
 
 footer {
@@ -115,23 +151,23 @@ footer {
   <div class="month"><strong>2月</strong></div>
   <div class="month"><strong>3月</strong></div>
 
-<div class="month">
+<div class="month highlight">
+  <span class="badge">開催予定あり</span>
   <strong>4月</strong>
 
   <div class="event">
     ゴルフコンペ　4/2(木)<br>
     <a href="https://forms.gle/onUnGJeUJBrunPZE9"
        target="_blank"
-       class="detail">＞＞＞ 詳細</a>
+       class="detail">詳細を見る</a>
   </div>
 
   <div class="event">
     定例会1　4/3(金)<br>
     <a href="https://forms.gle/GT342pdMpebbHMgV7"
        target="_blank"
-       class="detail">＞＞＞ 詳細</a>
+       class="detail">詳細を見る</a>
   </div>
-
 </div>
 
   <div class="month"><strong>5月</strong></div>
