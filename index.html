@@ -82,17 +82,24 @@ h1 {
   padding: 4px 10px;
   border-radius: 999px;
 }
-.new-badge {
-  display: inline-block;
-  margin-left: 8px;
+.new-month::after {
+  content: "NEW!";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #d32f2f;
+  color: #fff;
   font-size: 11px;
-  padding: 3px 8px;
-  background: #b71c1c;
-  color: #ffffff !important;
+  padding: 4px 10px;
   border-radius: 999px;
-  vertical-align: middle;
   font-weight: 600;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  animation: pop 1.8s infinite;
+}
+      @keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
 }
       
 /* イベント縦ライン */
@@ -309,11 +316,8 @@ footer {
   <div class="no-text">予定なし</div>
 </div>
 
-<div class="month highlight has-event">
-<strong>
-  4月
-  <span class="new-badge">NEW</span>
-</strong>
+<div class="month highlight has-event new-month">
+  <strong>4月</strong>
 
   <div class="toggle">イベント一覧</div>
 
